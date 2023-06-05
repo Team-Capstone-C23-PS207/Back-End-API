@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\tmp",
     "\\tmp\\tfjs_my_model"
   ],
-  "SelectedNode": "\\api.js",
+  "SelectedNode": "\\index.js",
   "PreviewInSolutionExplorer": false
 }
