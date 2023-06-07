@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');
+const fs = require('fs');
 const { getRecommendation } = require('./tmp/model_api/recommend');
 const { detectWaste } = require('./tmp/model_api/detect');
 
@@ -9,9 +10,14 @@ const app = express();
 app.use(bodyParser.json());
 
 // Konfigurasi multer untuk mengelola file yang diunggah
-const upload = multer({
-    dest: 'uploads/', // direktori penyimpanan file
+const storage = multer.diskStorage({
+    destination: 'uploads/', // direktori penyimpanan file
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    },
 });
+
+const upload = multer({ storage });
 
 // Mendefinisikan endpoint untuk menerima data gambar dan melakukan deteksi sampah
 // endpoint /detect
@@ -25,6 +31,15 @@ app.post('/detect', upload.single('image'), async (req, res) => {
 
         // Mengirim hasil deteksi ke sistem rekomendasi
         const recommendation = await sendToRecommend(detectedWaste);
+
+        // Menghapus file yang lama
+        if (req.file && req.file.path) {
+            fs.unlink(req.file.path, (err) => {
+                if (err) {
+                    console.error('Terjadi kesalahan saat menghapus file lama:', err);
+                }
+            });
+        }
 
         // Mengembalikan hasil deteksi sampah
         res.json({ HasilDeteksi: detectedWaste, Rekomendasi: recommendation });

@@ -6,7 +6,12 @@ const modelPath = './tmp/tfjs_my_model/model.json';
 // Fungsi untuk melakukan deteksi sampah menggunakan model ML
 async function detectWaste(imagePath) {
     // Mengimpor model ML dari file JSON
-    const model = await tf.loadLayersModel(`file://${modelPath}`);
+    //const model = await tf.loadLayersModel(`file://${modelPath}`);
+    const model = await tf.loadLayersModel(`file://${modelPath}`, {
+        customObjects: {
+            SeparableConv2D: tf.layers.SeparableConv2D,
+        },
+    });
 
     // Mempersiapkan gambar untuk deteksi
     const image = await loadImage(imagePath);
@@ -18,7 +23,7 @@ async function detectWaste(imagePath) {
     const predictedClass = predictions.argMax(1).dataSync()[0];
 
     // Mengambil label yang sesuai dengan hasil prediksi
-    const labels = ['AluCan', 'Glass', 'PET'];
+    const labels = ['AluCan', 'Glass', 'PET','Unknown'];
     const detectedWaste = labels[predictedClass];
 
     if (labels.includes(detectedWaste)) {
