@@ -11,11 +11,15 @@ Inside the API ScumRecycle, there is a feature to detect waste by distinguishing
 -----------------------
 
 <h3> Artcitecture </h3>
+
 ##
+
 ---------------
 
 <h3> Link API </h3>
+
 ##
+
 ---------------
 
 ### Dalam proses pengembangan ⚠
