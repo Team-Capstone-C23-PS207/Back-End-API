@@ -27,6 +27,7 @@ https://scum-recycle-389203.et.r.appspot.com
 **Endpoint**
 - /Detect
 - /Recommend 
+<br>*nb : When performing a test and experiencing loading (cooldown), please wait for 10 seconds before being able to perform the test again*
 
 **Specification**
 - **Engine**  : App Engine
@@ -34,8 +35,15 @@ https://scum-recycle-389203.et.r.appspot.com
 - **RAM**             : 2 GB
 - **Persistant Disk** : 10 GB
 
+
+
+
 ##
 
 ---------------
+
+<h3>Reference</h3>
+- Tensorflow/tfjs : https://www.tensorflow.org/js/guide/nodejs?hl=id <br>
+- Deploying in App engine : https://www.cloudskillsboost.google/course_templates/60
 
 ### Dalam proses pengembangan ⚠
