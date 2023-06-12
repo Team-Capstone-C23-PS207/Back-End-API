@@ -22,7 +22,11 @@ Inside the API ScumRecycle, there is a feature to detect waste by distinguishing
 
 <h3> Link API </h3>
 
-https://scum-recycle-389203.et.r.appspot.com/detect
+https://scum-recycle-389203.et.r.appspot.com
+
+**Endpoint**
+- /Detect
+- /Recommend 
 
 **Specification**
 - **Engine**  : App Engine
