@@ -46,4 +46,4 @@ https://scum-recycle-389203.et.r.appspot.com
 - Tensorflow/tfjs : https://www.tensorflow.org/js/guide/nodejs?hl=id <br>
 - Deploying in App engine : https://www.cloudskillsboost.google/course_templates/60
 
-### Dalam proses pengembangan ⚠
+
