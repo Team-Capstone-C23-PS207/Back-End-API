@@ -14,6 +14,8 @@ Inside the API ScumRecycle, there is a feature to detect waste by distinguishing
 
 <h3> Artcitecture </h3>
 
+<div align="center"><img src = "tmp/Diagram Arcitecture ScumRecycle (1).jpg" alt="Arcitecture" width="70%" style="display: inline-block;"></div>
+
 ##
 
 ---------------
