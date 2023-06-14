@@ -29,6 +29,8 @@ https://scum-recycle-389203.et.r.appspot.com
 - /Recommend 
 <br>*nb : When performing a test and experiencing loading (cooldown), please wait for 10 seconds before being able to perform the test again*
 
+Postman Link : [Click Here](https://documenter.getpostman.com/view/22889176/2s93sf1qiC)
+
 **Specification**
 - **Engine**  : App Engine
 - **CPU**             : 1
